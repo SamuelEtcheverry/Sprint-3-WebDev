@@ -1,17 +1,20 @@
 import { useState } from 'react';
+import { useRevealOnScroll } from './hooks/useRevealOnScroll.js';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import LoginScreen from './components/Login/LoginScreen.jsx';
+import Hero from './components/Hero/Hero.jsx';
+import About from './components/About/About.jsx';
 
-// Etapa 4: tela de login (migrada do script.js original para estado/eventos
-// do React). Enquanto "isLoggedIn" for falso, mostramos só o LoginScreen.
+// Etapa 5: seções Hero e Sobre. About é pai de AboutCard (dados vêm de
+// src/data/aboutCards.js e são passados como props para cada card).
 export default function App() {
   const [isLight, setIsLight] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState('');
 
-  function handleLogin({ email, name }) {
-    setUserName(name);
+  useRevealOnScroll(isLoggedIn);
+
+  function handleLogin() {
     setIsLoggedIn(true);
   }
 
@@ -23,12 +26,9 @@ export default function App() {
     <>
       <Header isLight={isLight} onToggleTheme={() => setIsLight((v) => !v)} />
 
-      <main className="site-container" style={{ display: 'block', padding: '20px 24px' }}>
-        <h1 className="hero-title">
-          Prime<br />
-          <span className="accent">Lens</span>
-        </h1>
-        <p className="hero-sub">Olá, {userName}! Etapa 4: login funcionando. Em construção...</p>
+      <main className="site-container">
+        <Hero />
+        <About />
       </main>
 
       <Footer scanCount={0} />

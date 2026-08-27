@@ -1,11 +1,9 @@
-# Prime Lens — Sprint 3 (React) — Etapa 4: Login
+# Prime Lens — Sprint 3 (React) — Etapa 5: Hero e Sobre
 
-Migração da tela e da validação de login do protótipo original para
-componentes e estado do React (`LoginScreen.jsx`).
-
-## Usuário/senha para teste
-
-Qualquer e-mail válido (com `@` e `.`) e senha com 6+ caracteres.
+Adição das seções `Hero` e `About` (com o componente filho `AboutCard`,
+alimentado por dados em `src/data/aboutCards.js`) e do hook
+`useRevealOnScroll`, que reproduz a animação de "revelar ao rolar a
+página" do protótipo original.
 
 ## Como rodar
 
