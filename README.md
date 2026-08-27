@@ -1,9 +1,8 @@
-# Prime Lens — Sprint 3 (React) — Etapa 5: Hero e Sobre
+# Prime Lens — Sprint 3 (React) — Etapa 6: Galeria (Slideshow)
 
-Adição das seções `Hero` e `About` (com o componente filho `AboutCard`,
-alimentado por dados em `src/data/aboutCards.js`) e do hook
-`useRevealOnScroll`, que reproduz a animação de "revelar ao rolar a
-página" do protótipo original.
+Adição da seção de galeria (`Slideshow`, pai do componente `Slide`), com
+navegação por botões, dots e troca automática de slide (com pausa ao passar
+o mouse), tudo controlado por estado do React.
 
 ## Como rodar
 

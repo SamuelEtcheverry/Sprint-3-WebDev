@@ -5,9 +5,10 @@ import Footer from './components/Footer/Footer.jsx';
 import LoginScreen from './components/Login/LoginScreen.jsx';
 import Hero from './components/Hero/Hero.jsx';
 import About from './components/About/About.jsx';
+import Slideshow from './components/Slideshow/Slideshow.jsx';
 
-// Etapa 5: seções Hero e Sobre. About é pai de AboutCard (dados vêm de
-// src/data/aboutCards.js e são passados como props para cada card).
+// Etapa 6: galeria (Slideshow), pai de Slide. Controla o índice do slide
+// atual em estado e passa "isActive" para cada filho via props.
 export default function App() {
   const [isLight, setIsLight] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -29,6 +30,7 @@ export default function App() {
       <main className="site-container">
         <Hero />
         <About />
+        <Slideshow />
       </main>
 
       <Footer scanCount={0} />
