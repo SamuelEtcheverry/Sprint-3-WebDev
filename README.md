@@ -1,8 +1,7 @@
-# Prime Lens — Sprint 3 (React) — Etapa 2: Estilos globais
+# Prime Lens — Sprint 3 (React) — Etapa 3: Header e Footer
 
-Nesta etapa foi adicionado o CSS global (`src/styles/index.css`), migrado
-quase integralmente do protótipo original (variáveis de cor, tipografia,
-reset), para confirmar que o visual do projeto já está sendo aplicado.
+Introdução dos primeiros componentes reais: `Header` (com o componente filho
+`ThemeToggle`) e `Footer`. Já demonstra a relação pai → filho via props.
 
 ## Como rodar
 

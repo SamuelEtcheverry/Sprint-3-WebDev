@@ -1213,3 +1213,35 @@ body.light-mode .field-group input {
     .slide-btn.prev   { left: -16px; }
     .slide-btn.next   { right: -16px; }
   }
+
+/* ==========================================================================
+   Adições da migração para React: Header e Footer (cabeçalho/rodapé)
+   ========================================================================== */
+
+.app-header {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 32px 0;
+}
+
+.app-header .theme-toggle {
+    position: static;
+}
+
+.app-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 24px 32px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+}
+
+.app-footer .footer-stat {
+    margin-top: 6px;
+    color: var(--accent);
+}
