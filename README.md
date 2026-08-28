@@ -86,12 +86,13 @@ src/
 └── main.jsx            # ponto de entrada do React
 ```
 
-## Funcionalidades que atendem aos requisitos da Sprint 3
+## Funcionalidades que atendem aos requisitos da Sprint 3 (Web Development)
 
 - **Componentes funcionais** em toda a aplicação.
 - **Estrutura pai → filho com props**: por exemplo `About` → `AboutCard`,
-  `Slideshow` → `Slide`, `PrototypeSection` → `Hint`/`PhoneMock`,
-  `PhoneMock` → `AIPopup`/`ResultPanel`, `Header` → `ThemeToggle`.
+  `Audience` → `AudienceCard`, `Team` → `TeamCard`, `Slideshow` → `Slide`,
+  `PrototypeSection` → `Hint`/`PhoneMock`, `PhoneMock` → `AIPopup`/`ResultPanel`,
+  `Header` → `Nav`/`ThemeToggle`.
 - **`localStorage`**: tema claro/escuro, último e-mail utilizado no login e
   contador de scans realizados, tudo isso persiste entre atualizações de
   página (`src/hooks/useLocalStorage.js`).
@@ -99,3 +100,29 @@ src/
   IA simulada detecta, `Math.round()` para gerar a porcentagem de confiança,
   e `Math.max()` para proteger o contador de scans (`PhoneMock.jsx`,
   `Footer.jsx`, `App.jsx`).
+
+## Funcionalidades que atendem aos requisitos da Sprint 3 (Front-End Design)
+
+A aplicação também funciona como a Landing Page da solução, com um **menu de
+navegação** (`Header` → `Nav`) que leva às seções abaixo:
+
+- **A Solução** (`#solucao`): seções `Hero` e `About`, explicando o problema,
+  os obstáculos enfrentados pelos usuários e como o Prime Lens resolve isso.
+- **Público-Alvo** (`#publico-alvo`): seção `Audience`, com os perfis de
+  usuário beneficiados pela solução.
+- **Galeria** (`#galeria`): seção `Slideshow`, com exemplos visuais reais de
+  uso da solução.
+- **Nossa Equipe** (`#equipe`): seção `Team`, com nome, função e RM de cada
+  integrante (mesmos dados do `INTEGRANTES.TXT`).
+- **Contato** (`#contato`): seção `Contact`, com formulário e informações de
+  contato em um elemento `<address>`.
+
+Recursos técnicos aplicados na construção da página:
+
+- **CSS Grid** (Grid Container + Grid Item) em `.audience-grid`, `.team-grid`,
+  `.future-grid` e `.contact-layout`.
+- **HTML Semântico**: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`,
+  `<address>`, `<footer>`, além de `<form>`/`<label>` no login e no contato.
+- **Responsividade** para **Desktop**, **Tablet** (`max-width: 1024px`) e
+  **Mobile** (`max-width: 700px`), incluindo um menu de navegação que vira
+  um menu retrátil (☰) em telas pequenas.
