@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero-section reveal-section">
+    <section className="hero-section reveal-section" id="solucao">
       <div className="hero-noise"></div>
       <div className="hero-glow-1"></div>
       <div className="hero-glow-2"></div>

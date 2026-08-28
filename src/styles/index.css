@@ -1218,15 +1218,78 @@ body.light-mode .field-group input {
    ========================================================================== */
 
 .app-header {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 20;
     display: flex;
-    justify-content: flex-end;
-    padding: 20px 32px 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 32px;
+    background: rgba(8, 11, 16, 0.72);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+body.light-mode .app-header {
+    background: rgba(255, 255, 255, 0.72);
 }
 
 .app-header .theme-toggle {
     position: static;
+}
+
+.app-logo {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.app-logo .logo-bracket {
+    color: var(--accent);
+}
+
+/* Menu de navegação principal (HTML semântico: <nav><ul><li>) */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.main-nav a:hover {
+    color: var(--accent);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border-accent);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .app-footer {

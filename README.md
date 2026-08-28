@@ -61,9 +61,9 @@ todas as funcionalidades no projeto final.
 
 Projeto disponível em:
 
-[Link do projeto na Vercel] — *(atualizar após o deploy)*
+[https://sprint-3-web-dev-three.vercel.app]
 
-Repositório GitHub: [Link do repositório] — *(atualizar após o push)*
+Repositório GitHub: [https://github.com/SamuelEtcheverry/Sprint-3-WebDev] 
 
 ## Estrutura do projeto
 
