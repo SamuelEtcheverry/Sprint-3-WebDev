@@ -1213,7 +1213,6 @@ body.light-mode .field-group input {
     .slide-btn.prev   { left: -16px; }
     .slide-btn.next   { right: -16px; }
   }
-
 /* ==========================================================================
    Adições da migração para React: Header e Footer (cabeçalho/rodapé)
    ========================================================================== */
