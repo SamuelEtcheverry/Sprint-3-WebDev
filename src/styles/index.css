@@ -1307,3 +1307,64 @@ body.light-mode .app-header {
     margin-top: 6px;
     color: var(--accent);
 }
+
+/* ==========================================================================
+   Público-Alvo, Nossa Equipe e Contato (Sprint 3 - Front-End Design)
+   ========================================================================== */
+
+.audience-section,
+.team-section,
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 24px;
+    gap: 0;
+}
+
+.section-subtitle {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: -18px;
+    margin-bottom: 48px;
+}
+
+/* Grid Container + Grid Item: público-alvo */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    width: 100%;
+}
+
+.audience-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    text-align: left;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.audience-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+}
+
+.audience-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.audience-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
