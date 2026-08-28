@@ -1,8 +1,15 @@
-# Prime Lens — Sprint 3 (React) — Etapa 6: Galeria (Slideshow)
+# Prime Lens — Sprint 3 (React) — Etapa 7: Protótipo interativo
 
-Adição da seção de galeria (`Slideshow`, pai do componente `Slide`), com
-navegação por botões, dots e troca automática de slide (com pausa ao passar
-o mouse), tudo controlado por estado do React.
+Migração da simulação de scan por IA (o "celular" na tela). Componentes
+`PrototypeSection` → `Hint` / `PhoneMock` → `AIPopup` / `ResultPanel`.
+
+Nesta etapa entram as operações com `Math`:
+
+- `Math.floor(Math.random() * n)` para sortear qual "código" foi detectado;
+- `Math.round()` para gerar a porcentagem de confiança da IA.
+
+(O `scanCount` ainda não é salvo em `localStorage` nesta etapa — isso
+acontece na Etapa 8.)
 
 ## Como rodar
 

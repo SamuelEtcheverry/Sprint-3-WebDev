@@ -6,17 +6,25 @@ import LoginScreen from './components/Login/LoginScreen.jsx';
 import Hero from './components/Hero/Hero.jsx';
 import About from './components/About/About.jsx';
 import Slideshow from './components/Slideshow/Slideshow.jsx';
+import PrototypeSection from './components/Prototype/PrototypeSection.jsx';
 
-// Etapa 6: galeria (Slideshow), pai de Slide. Controla o índice do slide
-// atual em estado e passa "isActive" para cada filho via props.
+// Etapa 7: protótipo interativo (o "telefone" simulando um scan com IA).
+// É aqui que entram as operações com Math (Math.random, Math.floor,
+// Math.round) usadas em PhoneMock.jsx para sortear o resultado do scan
+// e a porcentagem de confiança da IA.
 export default function App() {
   const [isLight, setIsLight] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [scanCount, setScanCount] = useState(0);
 
   useRevealOnScroll(isLoggedIn);
 
   function handleLogin() {
     setIsLoggedIn(true);
+  }
+
+  function handleScanComplete() {
+    setScanCount((count) => count + 1);
   }
 
   if (!isLoggedIn) {
@@ -31,9 +39,10 @@ export default function App() {
         <Hero />
         <About />
         <Slideshow />
+        <PrototypeSection onScanComplete={handleScanComplete} />
       </main>
 
-      <Footer scanCount={0} />
+      <Footer scanCount={scanCount} />
     </>
   );
 }
