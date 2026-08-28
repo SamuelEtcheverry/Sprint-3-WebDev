@@ -34,7 +34,7 @@ export default function Slideshow() {
   }, []);
 
   return (
-    <section className="slideshow-section reveal-section" id="slideshow">
+    <section className="slideshow-section reveal-section" id="galeria">
       <h2>Galeria de Capturas</h2>
       <p className="slideshow-subtitle">Exemplos reais de otimização pelo Prime Lens</p>
       <div className="slideshow-wrapper" ref={wrapperRef}>
