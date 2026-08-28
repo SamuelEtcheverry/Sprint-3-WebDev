@@ -1,25 +1,10 @@
-# Prime Lens — Sprint 3 (React) — Etapa 8: localStorage + Math
+# Prime Lens — Sprint 3 (React) — Etapa 9: Seção "Visão de Futuro"
 
-Etapa dedicada aos dois requisitos técnicos centrais da Sprint 3:
+Última seção de conteúdo do protótipo original: `FutureSection` (pai do
+componente `FutureItem`), fechando a estrutura completa da página.
 
-## localStorage
-
-Hook customizado `src/hooks/useLocalStorage.js`, usado em `App.jsx` para
-persistir:
-
-- tema claro/escuro (`primeLens:isLight`);
-- último e-mail usado no login (`primeLens:lastEmail`);
-- contador de scans realizados (`primeLens:scanCount`).
-
-Esses dados continuam disponíveis mesmo depois de recarregar a página.
-
-## Math
-
-- `Math.random()` + `Math.floor()` — sorteiam qual resultado a IA simulada
-  "detecta" (`PhoneMock.jsx`);
-- `Math.round()` — gera a porcentagem de confiança da IA (`PhoneMock.jsx`);
-- `Math.max()` — garante que o contador de scans nunca fica negativo
-  (`App.jsx`).
+A partir desta etapa o projeto React já reproduz fielmente todas as seções
+e funcionalidades do protótipo original das Sprints anteriores.
 
 ## Como rodar
 
