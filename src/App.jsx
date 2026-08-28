@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from './hooks/useLocalStorage.js';
 import { useRevealOnScroll } from './hooks/useRevealOnScroll.js';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -8,27 +9,34 @@ import About from './components/About/About.jsx';
 import Slideshow from './components/Slideshow/Slideshow.jsx';
 import PrototypeSection from './components/Prototype/PrototypeSection.jsx';
 
-// Etapa 7: protótipo interativo (o "telefone" simulando um scan com IA).
-// É aqui que entram as operações com Math (Math.random, Math.floor,
-// Math.round) usadas em PhoneMock.jsx para sortear o resultado do scan
-// e a porcentagem de confiança da IA.
+// Etapa 8: agora o tema, o último e-mail usado no login e o contador de
+// scans passam a ser guardados em localStorage (via useLocalStorage),
+// então esses dados sobrevivem a um refresh da página.
 export default function App() {
-  const [isLight, setIsLight] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [scanCount, setScanCount] = useState(0);
+
+  const [isLight, setIsLight] = useLocalStorage('primeLens:isLight', false);
+  const [lastEmail, setLastEmail] = useLocalStorage('primeLens:lastEmail', '');
+  const [scanCount, setScanCount] = useLocalStorage('primeLens:scanCount', 0);
 
   useRevealOnScroll(isLoggedIn);
 
-  function handleLogin() {
+  useEffect(() => {
+    document.body.classList.toggle('light-mode', isLight);
+  }, [isLight]);
+
+  function handleLogin({ email }) {
+    setLastEmail(email);
     setIsLoggedIn(true);
   }
 
   function handleScanComplete() {
-    setScanCount((count) => count + 1);
+    // Math.max garante que o contador nunca fica negativo por engano.
+    setScanCount((count) => Math.max(0, count + 1));
   }
 
   if (!isLoggedIn) {
-    return <LoginScreen onLogin={handleLogin} lastEmail="" />;
+    return <LoginScreen onLogin={handleLogin} lastEmail={lastEmail} />;
   }
 
   return (
