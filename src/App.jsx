@@ -7,9 +7,12 @@ import Footer from './components/Footer/Footer.jsx';
 import LoginScreen from './components/Login/LoginScreen.jsx';
 import Hero from './components/Hero/Hero.jsx';
 import About from './components/About/About.jsx';
+import Audience from './components/Audience/Audience.jsx';
 import Slideshow from './components/Slideshow/Slideshow.jsx';
 import PrototypeSection from './components/Prototype/PrototypeSection.jsx';
+import Team from './components/Team/Team.jsx';
 import FutureSection from './components/Future/FutureSection.jsx';
+import Contact from './components/Contact/Contact.jsx';
 
 // App.jsx é o componente PAI de toda a aplicação (estrutura: Header, corpo/Main, Footer).
 // Ele guarda os estados globais e os repassa para os componentes filhos via props.
@@ -50,9 +53,12 @@ export default function App() {
       <main className="site-container">
         <Hero />
         <About />
+        <Audience />
         <Slideshow />
         <PrototypeSection onScanComplete={handleScanComplete} />
+        <Team />
         <FutureSection />
+        <Contact />
       </main>
 
       <Footer scanCount={scanCount} />
